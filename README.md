@@ -87,8 +87,6 @@ print(bucket_summary)
 ### 📈 Visualization
 
 ```python
-import matplotlib.pyplot as plt
-
 bucket_summary['mean'].plot(kind='bar')
 plt.title("Conversion Rate by Ads Bucket")
 plt.ylabel("Conversion Rate")
@@ -104,7 +102,24 @@ plt.show()
 
 ---
 
-## 🧪 4. A/B Testing
+## 5.⏱ Time-based Analysis
+
+### 🕒 Conversion by Hour
+
+![Conversion by Hour](images/conversion_by_hour.png)
+
+### 🔥 Conversion Heatmap (Day vs Hour)
+
+![Heatmap](images/conversion_heatmap.png)
+
+### 💡 Insight:
+- Conversion varies significantly by time
+- Certain hours and days perform better
+- Ad timing optimization can improve performance
+
+---
+
+## 🧪 6. A/B Testing
 
 ### 🎯 Objective:
 
@@ -157,7 +172,7 @@ print(f"Conversion uplift: {uplift:.2%}")
 
 ---
 
-## 💡 5. Business Insights
+## 💡 7. Business Insights
 
 * 📈 Conversion increases with ad exposure
 * 🎯 High-exposure users (60+ ads) have the highest conversion rate
@@ -165,7 +180,7 @@ print(f"Conversion uplift: {uplift:.2%}")
 
 ---
 
-## 🧠 6. Recommendations
+## 🧠 8. Recommendations
 
 * 🎯 Target high-value users with optimized ad frequency
 * ⏱ Focus on effective time slots (hour/day)
@@ -173,7 +188,7 @@ print(f"Conversion uplift: {uplift:.2%}")
 
 ---
 
-## 📝 7. Key Takeaways
+## 📝 9. Key Takeaways
 
 * Data cleaning prevents misleading insights
 * Segmentation reveals hidden behavioral patterns
