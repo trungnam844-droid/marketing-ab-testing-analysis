@@ -1,6 +1,8 @@
 # 📊 Marketing Ads A/B Testing & Conversion Analysis
 
-This project analyzes the impact of advertising exposure on user conversion using a real-world marketing dataset. It demonstrates a full data analysis workflow including **data cleaning, exploratory data analysis (EDA), segmentation, visualization, and A/B testing**.
+- This project analyzes the impact of advertising exposure on user conversion using a real-world marketing dataset. 
+
+- It demonstrates a full data analysis workflow including **data cleaning, exploratory data analysis (EDA), segmentation, visualization, and A/B testing**.
 
 ---
 
@@ -36,7 +38,6 @@ This project analyzes the impact of advertising exposure on user conversion usin
 ### ✅ Solution
 
 ```python
-import pandas as pd
 
 # Remove top 1% outliers
 threshold = df['total_ads'].quantile(0.99)
@@ -88,8 +89,8 @@ print(bucket_summary)
 
 ```python
 bucket_summary['mean'].plot(kind='bar')
-plt.title("Conversion Rate by Ads Bucket")
-plt.ylabel("Conversion Rate")
+plt.title('Conversion Rate by Ads Bucket')
+plt.ylabel('Conversion Rate')
 plt.show()
 ```
 
@@ -144,12 +145,12 @@ treatment = df[df['group']=='treatment']['converted']
 
 t_stat, p_value = ttest_ind(control, treatment, equal_var=False)
 
-print("T-stat:", t_stat)
-print("P-value:", p_value)
+print('T-stat:', t_stat)
+print('P-value:', p_value)
 
 # Compare means
-print("Control mean:", control.mean())
-print("Treatment mean:", treatment.mean())
+print('Control mean:', control.mean())
+print('Treatment mean:', treatment.mean())
 ```
 
 ---
@@ -161,6 +162,10 @@ print("Treatment mean:", treatment.mean())
 
 👉 Ads have a **statistically significant impact on conversion**
 
+## 🧪 A/B Test Result Visualization
+
+![AB Test](images/ab_test_result.png)
+
 ---
 
 ### 🚀 Conversion Uplift
@@ -168,15 +173,17 @@ print("Treatment mean:", treatment.mean())
 ```python
 uplift = (treatment.mean() - control.mean()) / control.mean()
 print(f"Conversion uplift: {uplift:.2%}")
+
+Conversion uplift: 48.38%
 ```
 
 ---
 
 ## 💡 7. Business Insights
 
-* 📈 Conversion increases with ad exposure
-* 🎯 High-exposure users (60+ ads) have the highest conversion rate
-* 🧪 A/B testing confirms ads significantly impact conversion
+* 📈 Increasing ad exposure leads to higher conversion, but at a diminishing rate  
+* 🎯 High-frequency users show strong engagement and should be prioritized
+* 🧪 Optimal ad delivery timing (hour/day) can further improve performance
 
 ---
 
